@@ -1,4 +1,5 @@
-from graph import *
+from graph import UndirGraph
+from mst_algorithms import *
 
 matrix_of_adjacency = [[0,4,13,7,0,0],
                        [4,0,4,4,4,0],
@@ -7,7 +8,7 @@ matrix_of_adjacency = [[0,4,13,7,0,0],
                        [0,4,27,6,0,10],
                        [0,0,0,0,10,0]]
 
-graph = create_graph_by_matrix(matrix_of_adjacency)
+graph = UndirGraph(matrix_of_adjacency)
 
 prim = mst_by_prim(graph)
 print(prim)
